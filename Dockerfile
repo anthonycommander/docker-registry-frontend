@@ -9,7 +9,7 @@ USER root
 ############################################################
 
 ENV WWW_DIR /var/www/html
-ENV SOURCE_DIR /tmp/source
+ENV SOURCE_DIR /var/www/source
 ENV START_SCRIPT /root/start-apache.sh
 ENV APACHE_RUN_USER www-data
 ENV APACHE_RUN_GROUP www-data
