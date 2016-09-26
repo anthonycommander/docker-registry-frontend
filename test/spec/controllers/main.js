@@ -18,8 +18,8 @@ describe('MainController', function() {
     var scopeKeys = Object.keys(scope).sort();
     expect(scopeKeys).toEqual(['appVersion', 'registryHost']);
 
-    var expectedAppVersion = {"git": {"sha1": "foo", "ref": "bar"}};
-    var expectedRegistryHost = {"host": "path-to-your-registry", "port": 80};
+    var expectedAppVersion = {'git': {'sha1': 'foo', 'ref': 'bar'}};
+    var expectedRegistryHost = {'host': 'path-to-your-registry', 'port': 80};
     $httpBackend.expectGET('/app-version.json').respond(expectedAppVersion);
     $httpBackend.expectGET('registry-host.json').respond(expectedRegistryHost);
     $httpBackend.flush();

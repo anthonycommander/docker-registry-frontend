@@ -5,6 +5,14 @@ die() {
   exit 2
 }
 
+cp -rfu $SOURCE_DIR/dist/* $WWW_DIR
+
+if [ -z "$BASEPATH" ];
+	then BASEPATH=/;
+fi
+
+sed -i.bak "s;##BASEPATH##;$BASEPATH;g" $WWW_DIR/index.html
+
 if [ -e /etc/apache2/envvars.orig ]; then
   # On container restart we create a fresh copy of environment variables
   cp -f /etc/apache2/envvars.orig /etc/apache2/envvars
