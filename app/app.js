@@ -41,7 +41,7 @@ angular
   .config(['$routeProvider', '$resourceProvider', 'cfpLoadingBarProvider', '$locationProvider',
       function($routeProvider, $resourceProvider, cfpLoadingBarProvider, $locationProvider){
 
-     $locationProvider.html5Mode(true);
+     $locationProvider.html5Mode({enabled: true, requireBase: false});
 
     // Don't show the spinner when making XHR requests.
     // Also, show the bar only if an XHR request takes longer than 50ms.
