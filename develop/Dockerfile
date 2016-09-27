@@ -34,6 +34,7 @@ RUN apt-get -y install \
       nodejs \
       nodejs-legacy \
       npm \
+      libfontconfig \
       --no-install-recommends
 RUN git config --global url."https://".insteadOf git://
 # Avoid this: "Problem with the SSL CA cert (path? access rights?)"
